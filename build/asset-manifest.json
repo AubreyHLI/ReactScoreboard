@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ReactScoreboard/static/css/main.5e94fff6.css",
+    "main.js": "/ReactScoreboard/static/js/main.9e0c5a3a.js",
+    "index.html": "/ReactScoreboard/index.html",
+    "main.5e94fff6.css.map": "/ReactScoreboard/static/css/main.5e94fff6.css.map",
+    "main.9e0c5a3a.js.map": "/ReactScoreboard/static/js/main.9e0c5a3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e94fff6.css",
+    "static/js/main.9e0c5a3a.js"
+  ]
+}
