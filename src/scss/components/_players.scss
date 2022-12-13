@@ -1,0 +1,40 @@
+/* ============================================= */
+/*            		 Players                     */
+/* ============================================= */
+@use '../utilities' as *;
+
+.player {
+	height: 70px;
+    border-bottom: $brdr-secondary;
+	@include flexy($dire: row);
+
+    &:last-of-type {
+		border-bottom: none;
+    }
+	&-name {
+		color: $colro-font-primary;
+		word-break: break-all;
+		width: calc(100% - 150px);
+		padding-left: 10px; 
+		@include font-hover {
+			.remove-player {
+				visibility: visible;
+			}
+		}
+	}
+
+	@include meqe($breakpoint-s) {
+		font-size: 1.2em;
+		&-name {
+			width: calc(100% - $widget-width);
+		}
+	}
+}
+  
+.remove-player {
+	visibility: hidden;
+	transition: none;
+	@include layout($m:0 10px 0 0, $p:0);
+	@include font-design($fs:1.15em, $fc:#EF5350, $bgc:transparent);
+	@include font-hover($hovc:#EF5350);
+}

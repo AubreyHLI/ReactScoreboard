@@ -1,0 +1,26 @@
+/* ============================================= */
+/*              AddPlayerForm                    */
+/* ============================================= */
+@use '../utilities' as *;
+
+.addplayerform {
+    padding: 15px;
+    background-color: $color-primary;
+    border-top: $brdr-primary;
+    @include flexy($dire:row, $gap: 10px, $align: null);
+
+    input[type=text] {
+        flex-grow: 1;
+        min-width: 160px;
+        @include button-layout;
+        @include font-design($fc: $color-font-input, $bgc: $color-secondary);
+    
+        &::placeholder {
+            color: $color-font-input;
+        }
+        &:focus {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+  

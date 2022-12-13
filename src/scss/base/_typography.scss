@@ -1,0 +1,36 @@
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+@use '../utilities' as *;
+
+* {
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    @include layout($p: 0, $m: 0);
+}
+  
+body {
+    text-transform: uppercase;  
+    @include font-design($ff: $font-family-primary, $bgc: $color-bg);
+}
+
+
+/* ICONS */
+svg {
+    fill: $color-icon-normal;
+    @include layout($w: 28px, $h: 19px, $m: 0 5px 0 0);
+
+    &.is-high-score {
+        fill: $color-icon-success;
+        animation: grow 0.35s ease-in-out;
+        transform-origin: 50% 50%;
+    }
+}
+  
+@keyframes grow {
+    50% {
+      transform: scale(1.4) rotate(-3deg);
+    }
+}
+

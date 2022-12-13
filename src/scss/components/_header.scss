@@ -1,0 +1,25 @@
+/* ============================================= */
+/*                    Header                     */
+/* ============================================= */
+@use '../utilities' as *;
+
+header {
+    text-align: center;
+    border-bottom: $brdr-primary;
+    @include gridy($gtc:1fr 1fr, $gtr: 110px 110px, $gta: "title title" "stats stopwatch");
+    @include font-design($fc: $color-font-secondary, $bgc: $color-primary);
+    
+    @include meqe($breakpoint-s) {
+        @include gridy($dis:null, $gtc:170px 1fr $widget-width, $gtr: 120px, $gta: "stats title stopwatch", $align:null);
+        h1 {
+            font-size: 1.5em;
+        }
+    }
+}
+
+@each $gridItem,$gridArea in $gridAreaMap {
+    .#{$gridItem} {
+        grid-area: $gridArea;
+    }
+}
+

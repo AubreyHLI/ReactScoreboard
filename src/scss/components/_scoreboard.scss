@@ -1,0 +1,13 @@
+/* ============================================= */
+/*                 Scoreboard                    */
+/* ============================================= */
+@use '../utilities' as *;
+
+.scoreboard {
+    background: $color-font-secondary;
+    box-shadow: 0 2px 0 rgb(133, 104, 250);
+    @include layout($w: 100%, $minw: $min-width);
+    @include meqe($breakpoint-s) {
+        @include layout($m:70px auto, $maxw: $max-width, $rad: 6px);
+    }
+}

@@ -1,0 +1,33 @@
+/* ============================================= */
+/*             	   Statistic	                 */
+/* ============================================= */
+@use '../utilities' as *;
+
+.stats {
+	line-height: 2.25em;
+	background: $color-secondary;
+	@include layout($w: 100%, $h: 100%);
+
+	table {
+		@include layout($w: 70%, $m: 20px auto);
+	}
+
+	td:first-child {
+		letter-spacing: 2px;
+		text-align: right;
+		min-width: 130px;
+		@include font-design($fs: .7em, $fw: normal);
+	}
+	td:last-child {
+		text-align: left;
+	}
+
+	@include meqe($breakpoint-s) {
+		width: 170px;
+		background: transparent;
+		table {
+			width: 100%;
+		}
+	}
+
+}

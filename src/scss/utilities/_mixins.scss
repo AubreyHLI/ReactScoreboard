@@ -1,0 +1,81 @@
+// ============================================= 
+//                  Mixins                       
+// ============================================= 
+
+// Grid
+@mixin gridy($dis: grid, $gtc: null, $gtr: null, $gta: null, $align: center) {
+    display: $dis;
+    grid-template-columns: $gtc;
+    grid-template-rows: $gtr;
+    grid-template-areas: $gta;
+    align-items: $align;
+    @content;
+}
+
+// Flexbox
+@mixin flexy($dis: flex, $dire: null, $align: center, $lh: null, $gap: null) {
+	display: $dis;
+	flex-direction: $dire;
+    align-items: $align;
+    line-height: $lh;
+    gap: $gap;
+    @content;
+}
+
+// @mixin flex-grow-1($p: null, $m: null) {
+//     flex-grow: 1;
+//     padding: $p;
+//     margin: $m;
+// }
+
+// Layout
+@mixin layout($m: null, $p: null, $w: null, $h: null, $minw:null, $maxw: null, $rad:null, $bor: null) {
+    margin: $m;
+    padding: $p;
+    width: $w;
+    height: $h;
+    min-width: $minw;
+    max-width: $maxw;
+    border-radius: $rad;
+    border: $bor;
+}
+
+// Font Design
+@mixin font-design($ff: null, $fs: null, $fw: null, $fc: null, $bgc: null) {
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+    color: $fc;
+    background-color: $bgc;
+}
+
+@mixin font-hover($hovc: null, $hovbgc:null) {
+    &:hover {
+        color: $hovc;
+        background-color: $hovbgc;
+        @content;
+    }
+}
+
+// Input layout
+@mixin button-layout {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+
+// Media Queries
+@mixin meqe($bpvalue) {
+	@if $bpvalue == null {
+		@error '`#{$bpvalue}` is not a valid breakpoint value.';
+	}
+	@else {
+		@media (min-width: $bpvalue) {
+			@content; //允许media query更改rule properties
+		}
+	}
+}

@@ -1,0 +1,38 @@
+/* ============================================= */
+/*        		     Counter                     */
+/* ============================================= */
+@use '../utilities' as *;
+
+.counter {
+	text-align: center;
+	@include layout($w: 150px, $h: 100%);
+	@include flexy($dire: row);
+
+	&-score {
+		flex-grow: 1;
+		@include font-design($ff: $font-family-secondary, $fs: 2em, $fc: $colro-font-primary);
+	}
+
+	&-action {
+		display: block;
+		@include layout($w:44px, $h: 100%, $rad: 0);
+		@include font-design($fs: 1.15em, $fc: $color-font-btn, $bgc:$color-btn-bg2);
+		@include font-hover($hovc: $color-font-secondary){
+			&.increment {
+				background: $color-btn-incre;
+			}
+			&.decrement {
+				background: $color-btn-decre;
+			}
+		};
+	}
+	@include meqe($breakpoint-s) {
+		width: $widget-width;
+		&-action {
+			width: 60px;
+		}
+    }
+}
+  
+
+  

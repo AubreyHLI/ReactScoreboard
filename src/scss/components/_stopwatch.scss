@@ -1,0 +1,30 @@
+/* ============================================= */
+/*                  Stopwatch                    */
+/* ============================================= */
+@use '../utilities' as *;
+
+.stopwatch {
+    background: $color-secondary;
+    @include layout($w:100%, $h:110px, $p:10px 0);
+
+    &-time {
+        display: block;
+        @include font-design($ff:$font-family-secondary, $fs:2.15em);
+    }
+    h6 {
+        font-weight: normal;
+    }
+    button {
+        margin-top: 8px;
+        &:first-of-type {
+            margin-right: 5px;
+        }
+    }
+
+    @include meqe($breakpoint-s) {
+        @include layout($w: $widget-width, $h:100%, $p:16px 0);
+        button {
+            margin: 8px 5px 0 5px;
+        }
+    }
+}

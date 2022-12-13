@@ -1,0 +1,14 @@
+/* ============================================= */
+/*                   Buttons                     */
+/* ============================================= */
+@use '../utilities' as *;
+
+button,
+input[type=submit] {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    @include button-layout;
+    @include font-design($fs: .8em, $fw: bold, $fc: $color-font-secondary, $bgc: $color-btn-bg1);
+    @include font-hover($hovc: $color-btn-bg1, $hovbgc: $color-font-secondary);
+}
+  

@@ -1,0 +1,45 @@
+// ============================================= 
+//                Variables                      
+// ============================================= 
+
+// Colors
+$color-primary: #8063FA;
+$color-secondary: #5B45B9;
+$color-bg:  #e8e7e7;
+
+$colro-font-primary: #2F2366;
+$color-font-secondary: #fff;
+$color-font-input: #C7BCF8;
+$color-font-btn: #B0AEBA;
+
+$color-btn-bg1: #44338D;
+$color-btn-bg2: #DCDCDC;
+$color-btn-incre: #83D97C;
+$color-btn-decre: #EF5350;
+
+$color-icon-normal: #F0F0F0;
+$color-icon-success: #FFC657;
+
+// Fonts
+$font-family-primary: arial;
+$font-family-secondary: monospace;
+
+// Layout
+$min-width: 320px;
+$max-width: 700px;
+$widget-width: 190px;
+
+// Breakpoints
+$breakpoint-s: 584px;
+$breakpoint-m: 768px;
+
+// Border
+$brdr-primary: solid 2px #D4CAFF;
+$brdr-secondary: solid 2px #EEEEEE;
+
+// Grid Area (map)
+$gridAreaMap: (
+  'title': title,
+  'stats': stats,
+  'stopwatch': stopwatch
+);
