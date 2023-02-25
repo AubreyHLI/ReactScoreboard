@@ -1,7 +1,7 @@
 {
   "name": "scoreboard2",
   "version": "0.1.0",
-  "homepage": "https://aubreyhli.github.io/ReactScoreboard",
+  "homepage": "https://aubreyhli.github.io/ReactScoreboard/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
